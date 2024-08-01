@@ -1,48 +1,46 @@
-Audio Classification Using YAMNet
-Overview
-This project focuses on classifying audio files using the YAMNet model, a pre-trained audio classification model available on TensorFlow Hub. YAMNet is a deep neural network trained to recognize a wide variety of sounds, utilizing a Convolutional Neural Network (CNN) architecture. The model is capable of processing audio data to predict the presence of different sound classes.
+# Audio Classification with YAMNet and TensorFlow Hub
 
-Project Structure
-Audio File Path: The project starts by specifying the path to the audio file that will be classified.
-Audio Reading: The soundfile library is used to read the audio file, extracting the waveform and sample rate.
-Model Loading: The YAMNet model is loaded from TensorFlow Hub.
-Inference: The model processes the waveform to output scores, embeddings, and log-mel spectrograms.
-Class Mapping: The project extracts the class labels from the model, which correspond to different sound categories.
-Prediction: The model's output is analyzed to find the most likely sound class in the audio file.
-Key Components
-TensorFlow & TensorFlow Hub: Used for loading the YAMNet model and performing the inference.
-SoundFile & SoundDevice: Utilized for audio file reading and playback.
-Librosa: Provides functionalities for audio processing.
-CSV: Used for reading the class labels from the model's class map file.
-How It Works
-Loading the Model: The YAMNet model is loaded using TensorFlow Hub. This model has been pre-trained on a large dataset of audio recordings.
-Reading the Audio File: The audio file is read into a waveform array, and its sample rate is obtained.
-Model Inference: The model processes the waveform to generate:
-Scores: Probabilities for each class.
-Embeddings: Feature representations of the audio.
-Log-Mel Spectrogram: A time-frequency representation of the audio.
-Class Mapping: The model provides a path to the class map, which is read to obtain the human-readable names of the classes.
-Prediction: The class with the highest score is identified as the predicted sound class.
-Playback: The audio file can be played back using the SoundDevice library.
-Usage
-To use this project, ensure you have the required dependencies installed:
+This project demonstrates the use of the YAMNet model from TensorFlow Hub for classifying audio files. YAMNet is a deep learning model designed for identifying various sound events in audio recordings.
 
-TensorFlow
-TensorFlow Hub
-NumPy
-SoundFile
-SoundDevice
-Librosa
-You can run the project with the following command:
+## Overview
 
+The project involves loading an audio file, processing it with the YAMNet model, and classifying it into one of the predefined categories. It also includes functionality to play back the audio file after classification.
 
+## Features
 
-python audio_classification.py
-Replace audio_classification.py with the actual name of your Python script file.
+- **Audio File Processing:** Load and preprocess audio files for analysis.
+- **Model Integration:** Use YAMNet, a pre-trained model from TensorFlow Hub, to classify audio events.
+- **Classification Results:** Retrieve and display the classification results, including the most likely category.
+- **Audio Playback:** Play back the audio file to review the content.
 
-Future Work
-Model Fine-Tuning: Fine-tuning the model on a specific dataset to improve accuracy.
-Real-Time Classification: Implementing real-time audio classification.
-Extended Audio Analysis: Adding functionalities for analyzing longer audio segments or streaming data.
-License
-This project is licensed under the MIT License.
+## Requirements
+
+- Python 3.x
+- TensorFlow
+- TensorFlow Hub
+- NumPy
+- Librosa
+- Sounddevice
+
+## Setup Instructions
+
+1. **Clone the Repository:**  
+   Clone this repository to your local machine using `git clone`.
+
+2. **Install Dependencies:**  
+   Install the required Python libraries using pip.
+
+3. **Configure File Paths:**  
+   Update the file paths in the script to point to your audio files.
+
+4. **Run the Script:**  
+   Execute the script to perform audio classification and playback.
+
+## Usage
+
+To use the project, follow the setup instructions, then run the provided script. The script will classify the audio file using YAMNet and display the classification results. It will also play the audio file for your review.
+
+## Conclusion
+
+This project showcases the capabilities of the YAMNet model for audio classification tasks. It provides a straightforward approach to analyzing audio files and identifying various sound events. Future enhancements could include integrating the model into larger applications or adapting it for specific audio classification needs.
+
