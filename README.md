@@ -1,0 +1,2 @@
+# Audio Classification Using YAMNet
+ This project focuses on classifying audio files using the YAMNet model, a pre-trained audio classification model available on TensorFlow Hub. YAMNet is a deep neural network trained to recognize a wide variety of sounds, utilizing a Convolutional Neural Network (CNN) architecture. The model is capable of processing audio data to predict the presence of different sound classes.
